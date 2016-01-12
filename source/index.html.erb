@@ -1,0 +1,108 @@
+---
+title: Deeco - Freelance Webudvikler
+description: Jeg er programmør, UI designer og UX udvikler baseret i København og kan hjælpe dig med at virkeliggøre dit web projekt
+---
+
+<div id="header" class="section">
+  <%= image_tag_2x 'logo.png', alt: 'Deeco, Freelance Webudvikler', 'data-original-top' => '125' %>
+</div>
+<div id="info" class="section">
+	<h1>Hvem er jeg?</h1>
+	<p>Mit navn er Aske Hansen</p>
+	<p>
+    <img src="/images/aske-hansen.png" srcset="/images/aske-hansen@2x.png 2x" alt="Aske Hansen" class="profile">
+  </p>
+	<p>Jeg er <em>udvikler</em>, <em>designer</em> og <em>oplægsholder</em> baseret i København.<br>
+	Og så kan jeg hjælpe dig med at virkeliggøre <strong>dit web projekt</strong>.</p>
+	<br>
+	<p>
+		<button type="button" data-target="#modal_contact" data-toggle="modal" class="btn btn-lg btn-primary">Fortæl mig om dit projekt</button>
+	</p>
+</div>
+<div id="cases" class="section">
+	<h1>Det har jeg lavet</h1>
+
+	<div class="cases">
+    <% data.cases.each do |c| %>
+			<a href="http://<%= c.url %>" title="<%= c.title %>" target="_blank" class="case" rel="nofollow">
+        <%= image_tag_2x "cases/#{c.image}", alt: c.title %>
+			</a>
+		<% end %>
+
+		<a href="#" data-toggle="modal" data-target="#modal_contact" class="case">
+      <%= image_tag_2x 'your-website.png', alt: 'Din hjemmeside?' %>
+		</a>
+	</div>
+
+	<p>... samt meget andet</p>
+</div>
+<div id="contact">
+	<div class="section">
+		<h1>Her finder du mig</h1>
+
+		<ul class="fa-ul">
+			<li><i class="fa-li fa fa-phone"></i>+45 31 60 03 03</li>
+			<li><i class="fa-li fa fa-envelope"></i><a href="mailto:aske@deeco.dk">aske@deeco.dk</a></li>
+			<li><i class="fa-li fa fa-twitter"></i><a href="https://twitter.com/askehansen" target="_blank" rel="nofollow">twitter.com/askehansen</a></li>
+			<li><i class="fa-li fa fa-github"></i><a href="https://github.com/askehansen" target="_blank" rel="nofollow">github.com/askehansen</a></li>
+		</ul>
+
+		<br>
+		<br>
+		<p class="address">Deeco - Frederiksberggade 2 - 1459 København K - CVR. 31 53 69 28</p>
+	</div>
+</div>
+
+<iframe width='100%' height='400px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/aske.kbfhcn5g/attribution.html?access_token=pk.eyJ1IjoiYXNrZSIsImEiOiIyS3pocEJrIn0.OrOhEuAblWGxlqf_EARlQQ'></iframe>
+
+
+<div class="modal fade" id="modal_contact">
+<form action="//formspree.io/aske@deeco.dk" class="form-horizontal" id="contact_form">
+  <input type="hidden" name="_subject" value="Hej Aske">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h2 class="modal-title"><i class="fa fa-envelope fa-state-muted"></i> Send mig en besked</h2>
+      </div>
+      <div class="modal-body">
+    		<div class="form-group">
+		    	<label class="control-label col-sm-3">Dit navn</label>
+		    	<div class="col-sm-7">
+		      		<input type="text" class="form-control" name="name" required>
+		    	</div>
+		  	</div>
+    		<div class="form-group">
+		    	<label class="control-label col-sm-3">Din email</label>
+		    	<div class="col-sm-7">
+		      		<input type="email" class="form-control" name="email" required>
+		    	</div>
+		  	</div>
+    		<div class="form-group">
+		    	<label class="control-label col-sm-3">Din besked</label>
+		    	<div class="col-sm-7">
+		    		<textarea name="message" class="form-control" rows="4" placeholder="Fortæl lidt om dit projekt" required></textarea>
+		    	</div>
+		  	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuller</button>
+        <button type="submit" class="btn btn-success submit" data-loading-text="Sender..."><i class="fa fa-check"></i> Send besked</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
+<div class="modal fade" id="modal_thanks">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      	<p><i class="fa fa-thumbs-up fa-2x fa-state-muted"></i> Tak for din besked!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
