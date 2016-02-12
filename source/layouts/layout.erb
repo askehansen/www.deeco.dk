@@ -1,12 +1,23 @@
 <!doctype html>
 <html>
   <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta name="description" content="<%= current_page.data.description %>">
 
     <title><%= current_page.data.title || "Deeco" %></title>
+
+    <%= stylesheet_link_tag :site %>
+
+
+
+
+    <!-- Everything from here *should* be async -->
+
+
+
+    <%= javascript_include_tag :all, async: true, defer: true %>
 
 
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -42,8 +53,6 @@
     b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
     mixpanel.init("6a4d9a8d3fa72a4bdc276a74c0e941d9");</script><!-- end Mixpanel -->
 
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all, async: true, defer: true %>
   </head>
 
   <body class="<%= page_classes %>">
