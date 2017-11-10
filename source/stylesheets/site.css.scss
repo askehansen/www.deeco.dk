@@ -33,7 +33,8 @@ a {
   height: 100vh;
   perspective: 1px;
   overflow-x: hidden;
-  overflow-y: show;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scene-layer {
