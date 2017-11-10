@@ -8,17 +8,29 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site", 'https://cdnjs.cloudflare.com/ajax/libs/basscss/8.0.3/css/basscss.min.css' %>
-    <%= javascript_include_tag "site" %>
+    <%#= javascript_include_tag "site" %>
     <script src="https://use.typekit.net/aaj7otw.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
-    <div class="backdrop">
+
+
+    <div class="scene">
+      <div class="scene-layer scene-layer-back">
+        <div class="shade">
+        </div>
+      </div>
+      <div class="scene-layer scene-layer-front">
+        <div class="light">
+        </div>
+      </div>
+      <div class="scene-layer">
+        <div class="main">
+          <%= yield %>
+        </div>
+      </div>
+
     </div>
-    <div class="backdrop-second">
-    </div>
-    <div class="main">
-      <%= yield %>
-    </div>
+
   </body>
 </html>
