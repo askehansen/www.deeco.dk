@@ -1,0 +1,50 @@
+---
+title: Freelance udvikler
+---
+
+.max-width-4.mx-auto
+
+  .header
+    .header-logo
+      = image_tag 'deeco.svg', class: 'header-logo-image'
+      h1.header-logo-tagline Freelance udvikler
+      
+  .about
+    .about-text
+      h2.about-title Mit navn er Aske Hansen
+      .about-copy
+        | Jeg er udvikler og designer baseret i København.
+        br
+        | Og så kan jeg hjælpe dig med at virkeliggøre dit web projekt.
+    
+    .about-photo
+      = image_tag 'aske@2x.jpg', class: 'about-photo-image'
+
+  .work-wrapper
+    .work
+      h2.work-title Det arbejder jeg på for tiden
+      .work-items-wrapper
+        .work-items
+          = link_to 'greenline.dk', 'https://www.greenline.dk', target: '_blank', class: 'work-item'
+          = link_to 'diction.dk', 'https://www.diction.dk', target: '_blank', class: 'work-item'
+        .work-items
+          = link_to 'eanatomi.dk', 'https://www.eanatomi.dk', target: '_blank', class: 'work-item'
+          = link_to 'vinogvelsmag.dk', 'http://www.vinogvelsmag.dk', target: '_blank', class: 'work-item'
+      
+  .clients
+    = image_tag 'clients@2x.png', class: 'clients-photo'
+    
+  .contact-wrapper
+    .contact
+      h2.contact-title Sig hej til mig
+      .contact-items
+        .contact-item
+          .contact-item-line = link_to '+45 31 60 03 03', 'tel:31600303'
+          .contact-item-line = mail_to 'aske@deeco.dk'
+          .contact-item-line = link_to 'twitter.com/askehansen', 'https://twitter.com/askehansen', target: '_blank'
+          .contact-item-line = link_to 'github.com/askehansen', 'https://github.com/askehansen', target: '_blank'
+        .contact-item
+          .contact-item-line Deeco
+          .contact-item-line Frederiksberggade 2
+          .contact-item-line 1459 København K
+          .contact-item-line CVR. 31 53 69 28
