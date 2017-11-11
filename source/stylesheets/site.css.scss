@@ -29,35 +29,9 @@ a {
   }
 }
 
-.scene {
-  height: 100vh;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scene-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-
-.scene-layer-back {
-  transform: translateZ(-1px) scale(2);
-}
-.scene-layer-deep {
-  transform: translateZ(-2px) scale(3);
-}
-.scene-layer-front {
-  transform: translateZ(0.2px) scale(1);
-}
 
 .shade {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   background: rgba(#000, 0.02);
@@ -78,7 +52,7 @@ a {
 }
 
 .light {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   background: rgba($brand, 0.04);
@@ -101,10 +75,22 @@ a {
 }
 
 .header {
+  animation: header-blur 500ms cubic-bezier(.45,.05,.55,.95);
   padding: 1px 0;
   margin: 70px 0;
   @media (min-width: $screen-sm) {
     margin: 150px 0;
+  }
+}
+
+@keyframes header-blur {
+  from {
+    opacity: 0;
+    filter: blur(50px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
   }
 }
 
