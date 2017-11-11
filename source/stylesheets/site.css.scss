@@ -78,15 +78,6 @@ a {
   padding: 0 20px;
 }
 
-.header {
-  // animation: header-blur 500ms cubic-bezier(.45,.05,.55,.95);
-  padding: 1px 0;
-  margin: 70px 0;
-  @media (min-width: $screen-sm) {
-    margin: 150px 0;
-  }
-}
-
 @keyframes header-blur {
   from {
     opacity: 0;
@@ -120,8 +111,17 @@ a {
   }
 }
 
+.header {
+  // animation: header-blur 500ms cubic-bezier(.45,.05,.55,.95);
+  padding: 1px 0;
+  margin: 70px 0;
+  @media (min-width: $screen-sm) {
+    margin: 150px 0;
+  }
+}
+
 .header-logo-image {
-  animation: header-slide 1300ms;
+  // animation: header-slide 1300ms;
   width: 175px;
 
   @media (min-width: $screen-sm) {
@@ -132,12 +132,42 @@ a {
   }
 }
 
+.header-logo-image {
+  stroke: $brand;
+  stroke-width: 3px;
+  stroke-dasharray: 430px;
+  stroke-dashoffset: 430px;
+  animation-name: draw;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; // Stay on the last frame
+  animation-iteration-count: 1; // Run only once
+  animation-timing-function: linear;
+}
+
 .header-logo-image-shape {
-  fill: $black;
+  fill: white;
+  animation-name: fill;
+  animation-duration: 300ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; // Stay on the last frame
+  animation-iteration-count: 1; // Run only once
+  animation-timing-function: linear;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  to {
+    fill: $black;
+    stroke-width: 0;
+  }
 }
 
 .header-logo-tagline {
-  animation: header-slide-long 1300ms;
+  // animation: header-slide-long 1300ms;
   color: $brand;
   font-size: 18px;
   margin: 0;
