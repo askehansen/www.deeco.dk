@@ -1,0 +1,9 @@
+sites:
+  - name: greenline.dk
+    url: https:/www.greenline.dk
+  - name: diction.dk
+    url: https://www.diction.dk
+  - name: eanatomi.dk
+    url: https://www.eanatomi.dk
+  - name: vinogvelsmag.dk
+    url: http://www.vinogvelsmag.dk
