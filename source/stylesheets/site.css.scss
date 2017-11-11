@@ -133,25 +133,27 @@ a {
 }
 
 .header-logo-image {
-  stroke: $black;
-  stroke-width: 2px;
+  overflow: visible;
+  stroke: #ddd;
+  stroke-width: 5px;
+  stroke-location: inside;
   stroke-dasharray: 430px;
   stroke-dashoffset: 430px;
   animation-name: draw;
   animation-duration: 1s;
   animation-fill-mode: forwards; // Stay on the last frame
   animation-iteration-count: 1; // Run only once
-  animation-timing-function: linear;
+  animation-timing-function: ease-in;
 }
 
-.header-logo-image-shape {
+.header-logo-image-path {
   fill: white;
   animation-name: fill;
   animation-duration: 300ms;
   animation-delay: 1s;
   animation-fill-mode: forwards; // Stay on the last frame
   animation-iteration-count: 1; // Run only once
-  animation-timing-function: linear;
+  animation-timing-function: ease-in;
 }
 
 @keyframes draw {
