@@ -9,4 +9,4 @@ setInterval(function () {
     document.querySelector('.scene-layer-back').style.transform = 'translateY(' + Math.round(window.scrollY / 4) + 'px)'
     document.querySelector('.scene-layer-front').style.transform = 'translateY(-' + Math.round(window.scrollY / 3) + 'px)'
   })
-}, fps(60))
+}, fps(120))
