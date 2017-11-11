@@ -79,7 +79,7 @@ a {
 }
 
 .header {
-  animation: header-blur 500ms cubic-bezier(.45,.05,.55,.95);
+  // animation: header-blur 500ms cubic-bezier(.45,.05,.55,.95);
   padding: 1px 0;
   margin: 70px 0;
   @media (min-width: $screen-sm) {
@@ -98,7 +98,30 @@ a {
   }
 }
 
+@keyframes header-slide {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-slide-long {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header-logo-image {
+  animation: header-slide 1300ms;
   width: 175px;
 
   @media (min-width: $screen-sm) {
@@ -114,6 +137,7 @@ a {
 }
 
 .header-logo-tagline {
+  animation: header-slide-long 1300ms;
   color: $brand;
   font-size: 18px;
   margin: 0;
