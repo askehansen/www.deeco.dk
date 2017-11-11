@@ -1,25 +1,24 @@
 <!doctype html>
-<html>
+<html lang="da">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site", 'https://cdnjs.cloudflare.com/ajax/libs/basscss/8.0.3/css/basscss.min.css' %>
-    <%= javascript_include_tag "site" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= current_page.data.title || "Deeco" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site", async: true %>
+
     <script src="https://use.typekit.net/aaj7otw.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-19869716-2', 'deeco.dk');
-      ga('send', 'pageview');
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-19869716-2', 'auto');
+    ga('send', 'pageview');
     </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
 
     <!-- Hotjar Tracking Code for https://www.deeco.dk -->
     <script>
@@ -36,12 +35,13 @@
   <body>
 
 
-<div class="scene-layer scene-layer-back">
+<div class="scene-layer-back">
   <div class="shade"></div>
 </div>
-<div class="scene-layer scene-layer-front">
+<div class="scene-layer-front">
   <div class="light"></div>
 </div>
+
 <div class="main">
   <%= yield %>
 </div>

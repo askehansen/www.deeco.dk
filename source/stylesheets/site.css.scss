@@ -1,3 +1,5 @@
+@import "vendor/basscss.min.css";
+
 $pink: #b44bb5;
 $purple: #6622CA;
 $green: #6CC052;
@@ -17,6 +19,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: $black;
   text-transform: uppercase;
+  font-style: italic;
 }
 
 
@@ -86,7 +89,7 @@ a {
 @keyframes header-blur {
   from {
     opacity: 0;
-    filter: blur(50px);
+    filter: blur(20px);
   }
   to {
     opacity: 1;
