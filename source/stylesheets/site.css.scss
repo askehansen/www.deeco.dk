@@ -4,6 +4,7 @@ $pink: #b44bb5;
 $purple: #6622CA;
 $green: #6CC052;
 $black: #1d1d1d;
+$light-gray: #f5f5f5;
 
 $brand: $pink;
 $screen-sm: 768px;
@@ -13,6 +14,7 @@ $screen-lg: 1200px;
 body {
   font-family: "futura-pt-bold", sans-serif;
   color: $brand;
+  background: $light-gray;
   margin: 0;
   overflow-x: hidden;
 }
@@ -38,7 +40,7 @@ a {
   position: fixed;
   left: 0;
   right: 0;
-  background: rgba(#000, 0.02);
+  background: rgba(#000, 0.04);
   transform: skewY(-70deg);
   top: 390px;
   height: 780px;
@@ -59,7 +61,7 @@ a {
   position: fixed;
   left: 0;
   right: 0;
-  background: rgba($brand, 0.04);
+  background: rgba($brand, 0.06);
 
   transform: skewY(15deg);
   height: 480px;
@@ -147,7 +149,7 @@ a {
 }
 
 .header-logo-image-path {
-  fill: white;
+  fill: rgba($black, 0);
   animation-name: fill;
   animation-duration: 300ms;
   animation-delay: 1s;
