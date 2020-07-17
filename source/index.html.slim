@@ -3,59 +3,63 @@ title: Freelance udvikler
 ---
 
 
-.max-width-4.mx-auto
+.max-w-screen-lg.mx-auto
 
-  .header
-    .header-logo
-      svg.header-logo-image viewBox="0 0 488 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        path.header-logo-image-path d=data.logo.path
-      h1.header-logo-tagline Freelance udvikler
+  header.my-20 class="md:my-32"
+    svg.header-logo.h-6 class="md:h-12 lg:h-20" viewBox="0 0 488 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      path.header-logo-path d=data.logo.path
+    h1.header-tagline.text-pink-500.text-lg class="md:text-3xl lg:text-5xl" Freelance udvikler
+
+
+  main
+
+    section
+      .flex.justify-between
+        .max-w-lg
+          h2.header class="md:text-2xl lg:text-3xl" Mit navn er Aske Hansen
+          p.text-lg.leading-tight.text-pink-500 class="md:text-3xl lg:text-4xl" Jeg elsker at udvikle komplekse og hurtige website's samt designe brugervenlige interfaces med en høj konverteringsrate.
+          .mt-8.text-pink-500 class="lg:text-xl"
+            p.mb-4 Med mere end 10 års erfaring som freelance udvikler har jeg været involveret i en masse spændende projekter fra e-commerce til iPhone apps til booking systemer.
+            p.mb-4 Ved de fleste af disse projekter har jeg været ansvarlig for et stort spektrum inkluderende: Design, programmering, api integrering, skalering, hastighedsoptimering, data-analyse, a/b tests samt meget mere.
+
       
-  .about
-    .about-text
-      h2.about-title Mit navn er Aske Hansen
-      p.about-lead.mt0 Jeg elsker at udvikle komplekse og hurtige website's samt designe brugervenlige interfaces med en høj konverteringsrate.
-      .about-copy
-        p Med mere end 10 års erfaring som freelance udvikler har jeg været involveret i en masse spændende projekter fra e-commerce til iPhone apps til booking systemer.
-        p Ved de fleste af disse projekter har jeg været ansvarlig for et stort spektrum inkluderende: Design, programmering, api integrering, skalering, hastighedsoptimering, data-analyse, a/b tests samt meget mere.
-
-    
-    .about-photo
-      = image_tag 'aske@2x.jpg', class: 'about-photo-image'
+        .flex-none.w-32.-mr-8.ml-8 class="md:w-64 lg:mr-8"
+          = image_tag 'aske@2x.jpg', class: 'about-photo rounded-full'
+          .bg-white.rounded-lg.p-3.flex.items-center.-mt-4.relative.z-10
+            .job-status.w-3.h-3.bg-green-500.rounded-full.flex-none
+              a.ml-2.text-sm class="md:text-base" href="#footer" Tilgængelig til nye jobs
 
 
-  .traits
-    .trait
-      h3.mb0 Som designer
-      p.trait-copy.mt0 går jeg op i at websitet er brugervenligt på tværs af enheder og at det vigtige indhold er i fokus. Eksempelvis på et varekort er det vigtigt at kunden får besvaret alle sine spørgsmål vedr. produktet, og checkout bør være nem at udfylde og bør give kunden tryghed.
-    .trait
-      h3.mb0 Som udvikler
-      p.trait-copy.mt0 går jeg op i at websitet er hurtigt og at koden er strukturet og nem at vedligeholde. Når koden er til at forstå bliver det nemmere at opdatere den på et senere tidspunkt.
+    section.my-20.-mx-10 class="md:my-32 md:flex"
+      .flex-1.m-10
+        h3.header Som designer
+        p.text-pink-500 class="lg:text-xl" går jeg op i at websitet er brugervenligt på tværs af enheder og at det vigtige indhold er i fokus. Eksempelvis på et varekort er det vigtigt at kunden får besvaret alle sine spørgsmål vedr. produktet, og checkout bør være nem at udfylde og bør give kunden tryghed.
+      .flex-1.m-10
+        h3.header Som udvikler
+        p.text-pink-500 class="lg:text-xl" går jeg op i at websitet er hurtigt og at koden er strukturet og nem at vedligeholde. Når koden er til at forstå bliver det nemmere at opdatere den på et senere tidspunkt.
 
-  .work-wrapper
-    .work
-      h2.work-title Det arbejder jeg på for tiden
-      .work-items-wrapper
+    section.my-20.max-w-sm.mx-auto class="md:my-32 md:max-w-2xl"
+      h2.header class="md:text-xl" Det arbejder jeg på for tiden
+      .flex.-mx-4 class="md:-mx-8"
         - array_in_groups_of(data.work.sites, 2) do |group|
-          .work-items
+          div
             - group.each do |item|
-              = link_to item.name, item.url, target: '_blank', class: 'work-item'
-              
-  .clients
-    = image_tag 'clients@2x.png', class: 'clients-photo'
+              = link_to item.name, item.url, target: '_blank', class: 'work-link block text-pink-500 m-4 md:text-3xl md:m-8'
+                
+    section.my-20.mx-auto.max-w-sm class="md:my-32 md:max-w-2xl"
+      = image_tag 'clients@2x.png', class: "w-full"
     
-  .contact-wrapper
-    .contact
-      h2.contact-title Sig hej til mig
-      .contact-items
-        .contact-item
-          .contact-item-line = link_to '+45 31 60 03 03', 'tel:31600303'
-          .contact-item-line = mail_to 'aske@deeco.dk'
-          .contact-item-line = link_to 'twitter.com/askehansen', 'https://twitter.com/askehansen', target: '_blank'
-          .contact-item-line = link_to 'github.com/askehansen', 'https://github.com/askehansen', target: '_blank'
-          .contact-item-line = link_to 'Læs mit CV', 'https://www.notion.so/sayconsulting/Resume-1370e325daa94ef8a8457a6c23b9f645', target: '_blank'
-        .contact-item
-          .contact-item-line Deeco
-          .contact-item-line Vestergade 16, 3. sal
-          .contact-item-line 1456 København K
-          .contact-item-line CVR. 31 53 69 28
+  footer#footer.max-w-sm.mx-auto class="md:max-w-2xl"
+    h2.header class="md:text-xl" Sig hej til mig
+    .text-pink-500.-mx-6 class="md:flex md:-mx-12 md:text-2xl"
+      section.space-y-2.m-6 class="md:m-12"
+        div = link_to '+45 31 60 03 03', 'tel:31600303', class: 'hover:underline'
+        div = mail_to 'aske@deeco.dk', 'aske@deeco.dk', class: 'hover:underline'
+        div = link_to 'twitter.com/askehansen', 'https://twitter.com/askehansen', target: '_blank', class: 'hover:underline'
+        div = link_to 'github.com/askehansen', 'https://github.com/askehansen', target: '_blank', class: 'hover:underline'
+        div = link_to 'Læs mit CV', 'https://www.notion.so/sayconsulting/Resume-1370e325daa94ef8a8457a6c23b9f645', target: '_blank', class: 'hover:underline'
+      section.space-y-2.m-6 class="md:m-12"
+        div Deeco
+        div Vestergade 16, 3. sal
+        div 1456 København K
+        div CVR. 31 53 69 28

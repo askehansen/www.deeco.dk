@@ -39,9 +39,15 @@ helpers do
   end
 end
 
+activate :external_pipeline, {
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d --color',
+  source: ".tmp/dist",
+  latency: 1
+}
+
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
 configure :build do
   activate :minify_css
   activate :minify_javascript

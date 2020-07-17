@@ -1,9 +1,5 @@
 sites:
-  - name: greenline.dk
-    url: https://www.greenline.dk
   - name: diction.dk
     url: https://www.diction.dk
   - name: eanatomi.dk
     url: https://www.eanatomi.dk
-  - name: nabokarma.dk
-    url: https://www.nabokarma.dk

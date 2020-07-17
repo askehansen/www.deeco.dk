@@ -1,0 +1,128 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/screens";
+
+
+body {
+  font-family: "futura-pt-bold", sans-serif;
+}
+
+
+.shade {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgba(29, 29, 29, 0.04);
+  transform: skewY(-70deg);
+  top: 390px;
+  height: 780px;
+}
+@screen sm {
+  .shade {
+    transform: skewY(-50deg);
+    top: 600px;
+    height: 1000px;
+  }
+}
+@screen md {
+  .shade {
+    transform: skewY(-50deg);
+    top: 600px;
+    height: 1000px;
+  }
+}
+
+.light {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgba(180, 75, 181, 0.06);
+
+  transform: skewY(15deg);
+  height: 480px;
+  top: 720px;
+
+}
+@screen sm {
+  .light {
+    top: 1300px;
+    transform: skewY(10deg);
+    height: 1000px;
+  }
+}
+
+@keyframes header-slide-long {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-logo {
+  overflow: visible;
+  stroke: #ddd;
+  stroke-width: 5px;
+  stroke-location: inside;
+  stroke-dasharray: 430px;
+  stroke-dashoffset: 430px;
+  animation-name: draw;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+.header-logo-path {
+  fill: rgba(29, 29, 29, 0);
+  animation-name: fill;
+  animation-duration: 300ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  to {
+    fill: rgba(29, 29, 29, 1);
+    stroke-width: 0;
+  }
+}
+
+.header-tagline {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: header-slide-long 300ms;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.about-photo {
+  box-shadow: 0 0 150px rgba(180, 75, 181, 0.15);
+}
+
+.work-link {
+  transition: text-shadow 500ms ease-out;
+}
+.work-link:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 30px rgba(180, 75, 181, 0.2);
+}
+.job-status {
+  box-shadow: 0 0 10px rgb(0,191,113, 0.3);
+}
+
+.header {
+  @apply uppercase italic;
+}
