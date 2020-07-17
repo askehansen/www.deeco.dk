@@ -49,8 +49,6 @@ activate :external_pipeline, {
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 configure :build do
-  activate :minify_css
-  activate :minify_javascript
   activate :asset_hash
   activate :gzip
 end
