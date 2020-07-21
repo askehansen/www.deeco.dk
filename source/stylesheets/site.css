@@ -13,7 +13,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  background: rgba(29, 29, 29, 0.04);
+  background: rgba(255, 255, 255, 0.03);
   transform: skewY(-70deg);
   top: 390px;
   height: 780px;
@@ -78,7 +78,7 @@ body {
 }
 
 .header-logo-path {
-  fill: rgba(29, 29, 29, 0);
+  fill: rgba(255, 255, 255, 0);
   animation-name: fill;
   animation-duration: 300ms;
   animation-delay: 1s;
@@ -94,7 +94,7 @@ body {
 }
 @keyframes fill {
   to {
-    fill: rgba(29, 29, 29, 1);
+    fill: rgba(255, 255, 255, 1);
     stroke-width: 0;
   }
 }

@@ -16,9 +16,9 @@ title: Freelance udvikler
     section
       .flex.justify-between
         .max-w-lg
-          h2.header class="md:text-2xl lg:text-3xl" Mit navn er Aske Hansen
-          p.text-lg.leading-tight.text-pink-500 class="md:text-3xl lg:text-4xl" Jeg elsker at udvikle komplekse og hurtige website's samt designe brugervenlige interfaces med en høj konverteringsrate.
-          .mt-8.text-pink-500 class="lg:text-xl"
+          h2.header.text-pink-500 class="md:text-2xl lg:text-3xl" Mit navn er Aske Hansen
+          p.text-lg.leading-tight.text-white class="md:text-3xl lg:text-4xl" Jeg elsker at udvikle komplekse og hurtige website's samt designe brugervenlige interfaces med en høj konverteringsrate.
+          .mt-8.text-white class="lg:text-xl"
             p.mb-4 Med mere end 10 års erfaring som freelance udvikler har jeg været involveret i en masse spændende projekter fra e-commerce til iPhone apps til booking systemer.
             p.mb-4 Ved de fleste af disse projekter har jeg været ansvarlig for et stort spektrum inkluderende: Design, programmering, api integrering, skalering, hastighedsoptimering, data-analyse, a/b tests samt meget mere.
 
@@ -32,26 +32,26 @@ title: Freelance udvikler
 
     section.my-20.-mx-10 class="md:my-32 md:flex"
       .flex-1.m-10
-        h3.header Som designer
-        p.text-pink-500 class="lg:text-xl" går jeg op i at websitet er brugervenligt på tværs af enheder og at det vigtige indhold er i fokus. Eksempelvis på et varekort er det vigtigt at kunden får besvaret alle sine spørgsmål vedr. produktet, og checkout bør være nem at udfylde og bør give kunden tryghed.
+        h3.header.text-pink-500 Som designer
+        p.text-white class="lg:text-xl" går jeg op i at websitet er brugervenligt på tværs af enheder og at det vigtige indhold er i fokus. Eksempelvis på et varekort er det vigtigt at kunden får besvaret alle sine spørgsmål vedr. produktet, og checkout bør være nem at udfylde og bør give kunden tryghed.
       .flex-1.m-10
-        h3.header Som udvikler
-        p.text-pink-500 class="lg:text-xl" går jeg op i at websitet er hurtigt og at koden er strukturet og nem at vedligeholde. Når koden er til at forstå bliver det nemmere at opdatere den på et senere tidspunkt.
+        h3.header.text-pink-500 Som udvikler
+        p.text-white class="lg:text-xl" går jeg op i at websitet er hurtigt og at koden er strukturet og nem at vedligeholde. Når koden er til at forstå bliver det nemmere at opdatere den på et senere tidspunkt.
 
     section.my-20.max-w-sm.mx-auto class="md:my-32 md:max-w-2xl"
-      h2.header class="md:text-xl" Det arbejder jeg på for tiden
+      h2.header.text-pink-500 class="md:text-xl" Det arbejder jeg på for tiden
       .flex.-mx-4 class="md:-mx-8"
         - array_in_groups_of(data.work.sites, 2) do |group|
           div
             - group.each do |item|
-              = link_to item.name, item.url, target: '_blank', class: 'work-link block text-pink-500 m-4 md:text-3xl md:m-8'
+              = link_to item.name, item.url, target: '_blank', class: 'work-link block text-white m-4 md:text-3xl md:m-8'
                 
     section.my-20.mx-auto.max-w-sm class="md:my-32 md:max-w-2xl"
-      = image_tag 'clients@2x.png', class: "w-full"
+      = image_tag 'clients-white@2x.png', class: "w-full"
     
   footer#footer.max-w-sm.mx-auto class="md:max-w-2xl"
-    h2.header class="md:text-xl" Sig hej til mig
-    .text-pink-500.-mx-6.flex-wrap class="md:flex md:-mx-12 md:text-2xl"
+    h2.header.text-pink-500 class="md:text-xl" Sig hej til mig
+    .text-white.-mx-6.flex-wrap class="md:flex md:-mx-12 md:text-2xl"
       section.space-y-2.m-6 class="md:m-12 flex-1"
         div = link_to '+45 31 60 03 03', 'tel:31600303', class: 'hover:underline'
         div = mail_to 'aske@deeco.dk', 'aske@deeco.dk', class: 'hover:underline'
