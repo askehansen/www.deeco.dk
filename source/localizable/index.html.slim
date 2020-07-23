@@ -8,8 +8,8 @@ title:
 .max-w-screen-lg.mx-auto
 
   navigation.my-6.flex.space-x-4.text-sm.text-gray-300.font-bold.uppercase
-    = link_to 'Dansk', '/', class: "px-1 border-b-2 #{I18n.locale == :da ? 'border-white text-white' : 'border-transparent'}"
-    = link_to 'English', '/en', class: "px-1 border-b-2 #{I18n.locale == :en ? 'border-white text-white' : 'border-transparent'}"
+    a href='/' class="px-1 border-b-2 #{I18n.locale == :da ? 'border-white text-white' : 'border-transparent'}" Dansk
+    a href='/en' class="px-1 border-b-2 #{I18n.locale == :en ? 'border-white text-white' : 'border-transparent'}" English
 
   header.my-20 class="md:my-32"
     svg.header-logo.h-6 class="md:h-12 lg:h-20" viewBox="0 0 488 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
