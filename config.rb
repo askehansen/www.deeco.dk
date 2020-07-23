@@ -39,6 +39,8 @@ helpers do
   end
 end
 
+activate :i18n, :mount_at_root => :da
+
 activate :external_pipeline, {
   name: :webpack,
   command: build? ? './node_modules/webpack/bin/webpack.js --bail --mode=production' : './node_modules/webpack/bin/webpack.js --watch -d --color',

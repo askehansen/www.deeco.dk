@@ -1,0 +1,24 @@
+---
+en:
+  tagline: Freelance developer
+
+  name: My name is Aske Hansen
+  lead: I love developing complex yet fast website's and designing user-friendly interfaces with a high conversion rate.
+  experience: With more than 10 years of experience as a freelance developer, i have been involved with many exciting projects ranging from e-commerce to iPhone apps to booking systems.
+
+  responsibility: 'For the majority of these projects i have been responsible for a wide spectrum including: Design, programming, api-integration, scaling, performance optimization, data-analysis, a/b testing and much more.'
+
+  available: Available for new jobs
+  
+  as_a_designer:
+    title: As a designer
+    body: i aim for the website to be user-friendly across devices and the important content is in focus. For instance a product-page should in a clear manner answer all questions a customer would have, and the checkout-page should convey trust and be easy to complete.
+  as_a_developer:
+    title: As a developer
+    body: As a developer i aim for the website to be fast and the code to be structured and maintainable. When the code is easy to understand it will be easier to update at a later point in time.
+  
+  working_on: Currently working on
+
+  say_hi: Say hi
+
+  resume: Read my resume
