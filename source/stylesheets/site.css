@@ -119,8 +119,13 @@ body {
   text-decoration: underline;
   text-shadow: 0 0 30px rgba(180, 75, 181, 0.2);
 }
-.job-status {
+.available {
+  @apply bg-green-500;
   box-shadow: 0 0 10px rgb(0,191,113, 0.3);
+}
+.unavailable {
+  @apply bg-red-500;
+  box-shadow: 0 0 10px rgb(245, 101, 101, 0.3);
 }
 
 .header {
