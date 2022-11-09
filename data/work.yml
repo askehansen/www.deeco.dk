@@ -5,3 +5,5 @@ sites:
     url: https://apps.apple.com/dk/app/lej-en-dj/id1510657806?l=da
   - name: noupetit.dk
     url: https://www.noupetit.dk
+  - name: mobileshare.dk
+    url: https://www.mobileshare.dk/
